@@ -64,7 +64,7 @@ public class MomentService {
             }
 
             result.forEach(moment -> {
-                List<Comment> comments = commentRepository.findAll();
+                List<Comment> comments = commentRepository.findByMomentId(moment.getId());
                 comments = comments == null ? new ArrayList<>() : comments;
 
                 comments.forEach(comment -> {

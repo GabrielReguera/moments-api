@@ -34,7 +34,7 @@ public class MomentResource {
         return service.update(moment);
     }
 
-    @GetMapping(value = "/moments")
+    @GetMapping(value = "/moments") 
     public Response<List<Moment>> list() {
         return service.list();
     }
